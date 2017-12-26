@@ -2,9 +2,9 @@
 
 var apiKey = 'trnsl.1.1.20171226T172043Z.e378d286d4be7d8e.3b8cb91c3c8a2e890d1dc77cd47f198e0218b9c9';
 var translateButton = document.getElementById('translate-button');
-var languages = void 0;
+var languages = {};
 
-function constructor() {
+function main() {
     setEventListeners();
     getLanguages();
 }
@@ -16,17 +16,30 @@ function setEventListeners() {
 function getLanguages() {
     fetch('https://translate.yandex.net/api/v1.5/tr.json/getLangs?key=' + apiKey + '&ui=en').then(function (res) {
         res.json().then(function (data) {
-            languages = data.langs;
-            console.log(languages);
-            // for (let key in data.langs) {
-            //     if (data.langs.hasOwnProperty(key)) {
-            //         languages.push(key);
-            //     }
-            // }
+            populateLanguageSelection(data.langs);
         });
     }).catch(function (err) {
         console.log('Error: ' + err);
     });
+}
+
+function populateLanguageSelection(languages) {
+    var languageSelection1 = document.getElementById('language-selection1');
+    var languageSelection2 = document.getElementById('language-selection2');
+
+    for (var key in languages) {
+        if (languages.hasOwnProperty(key)) {
+            var option1 = document.createElement('option');
+            option1.setAttribute('value', languages[key]);
+            option1.appendChild(document.createTextNode(languages[key]));
+            languageSelection1.appendChild(option1);
+
+            var option2 = document.createElement('option');
+            option2.setAttribute('value', languages[key]);
+            option2.appendChild(document.createTextNode(languages[key]));
+            languageSelection2.appendChild(option2);
+        }
+    }
 }
 
 function translate() {
@@ -43,4 +56,4 @@ function translate() {
     });
 }
 
-constructor();
+main();

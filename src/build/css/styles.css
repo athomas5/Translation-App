@@ -26,8 +26,7 @@ html {
       padding: 12px;
       font-size: 16px;
       color: #fff;
-      outline: none;
-      cursor: pointer; }
+      outline: none; }
       .body-container .text-container .textarea:first-child {
         margin-right: 4%; }
       .body-container .text-container .textarea:focus, .body-container .text-container .textarea:active {
