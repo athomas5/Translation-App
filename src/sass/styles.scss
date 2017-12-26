@@ -1,4 +1,65 @@
-h1 {
-    color: pink;
-    font-family: Helvetica, sans-serif;
+// Color variables
+$white: #fff;
+$blue: #062F4F;
+$asphalt: #34495e;
+$light-green: #2ecc71;
+$dark-green: #27ae60;
+
+
+html {
+    background-color: $blue;
+}
+
+.header {
+    color: $white;
+    font-size: 32px;
+    margin-bottom: 35px;
+    letter-spacing: 1.2px;
+}
+
+.body-container {
+    margin: 0 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+
+    .text-container {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 50px;
+
+        .textarea {
+            width: 48%;
+            background-color: $asphalt;
+            border: 1px solid $white;
+            padding: 12px;
+            font-size: 16px;
+            color: $white;
+            outline: none;
+            cursor: pointer;
+
+            &:first-child {
+                margin-right: 4%;
+            }
+
+            &:focus,
+            &:active {
+                border-color: $light-green;
+                transition: .2s border-color;
+            }
+        }
+    }
+
+    .translate-button {
+        padding: 20px 50px;
+        border-radius: 0;
+        margin: 0 auto;
+        color: $white;
+        background: $light-green;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $dark-green;
+            transition: .2s background-color;
+        }
+    }
 }
