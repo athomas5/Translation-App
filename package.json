@@ -1,0 +1,31 @@
+{
+  "name": "translator-app",
+  "version": "1.0.0",
+  "description": "Translator application build with the \"Yandex Translate API\". The API provides access to the Yandex online machine translation service. It supports more than 90 languages and can translate separate words or complete texts. The API makes it possible to embed Yandex.Translate in a mobile app or web service for end users. Or translate large quantities of text, such as technical documentation.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/athomas5/Translator-App.git"
+  },
+  "keywords": [
+    "translator",
+    "api",
+    "yandex"
+  ],
+  "author": "Andre Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/athomas5/Translator-App/issues"
+  },
+  "homepage": "https://github.com/athomas5/Translator-App#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
