@@ -15,20 +15,27 @@
 
         <a class="disclaimer" href="http://translate.yandex.com/" target="_blank">Powered by Yandex.Translate</a>
 
-        <div class="text-container">
+        <div class="flex-container">
+            <div class="col-container col-left">
             <textarea class="textarea" name="first-language" id="textArea1" rows="12"></textarea>
-            <textarea class="textarea" name="second-language" id="textArea2" rows="12"></textarea>
+                <div class="language-selection">
+                <select id="language-selection1">
+                    <option value="Select Language" selected>Select Language</option>
+                </select>
+            </div>
         </div>
 
-        <select class="language-selection" id="language-selection1">
-            <option value="Select Language" selected>Select Language</option>
-        </select>
-        <select class="language-selection" id="language-selection2">
-            <option value="Select Language">Select Language</option>
-        </select>
+        <div class="col-container col-right">
+            <textarea class="textarea" name="second-language" id="textArea2" rows="12"></textarea>
+                <div class="language-selection">
+                <select id="language-selection2">
+                    <option value="Select Language" selected>Select Language</option>
+                </select>
+            </div>
+        </div>
+        </div>
 
         <buttton id="translate-button">Translate</buttton>
-        <p class="error-message">Select two languages</p>
     </section>
     
 

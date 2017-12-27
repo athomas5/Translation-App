@@ -14,24 +14,71 @@ html {
     color: #fff;
     text-decoration: none;
     font-size: 12px; }
-  .body-container .text-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 25px;
-    margin-bottom: 50px; }
-    .body-container .text-container .textarea {
-      width: 48%;
-      background-color: #34495e;
-      border: 1px solid #fff;
-      padding: 12px;
+  .body-container .flex-container {
+    display: flex; }
+    .body-container .flex-container .col-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 25px;
+      margin-bottom: 50px;
+      width: 50%; }
+      .body-container .flex-container .col-container .textarea {
+        width: 90%;
+        background-color: #34495e;
+        border: 1px solid #fff;
+        padding: 12px;
+        font-size: 16px;
+        color: #fff;
+        outline: none;
+        margin-bottom: 35px; }
+        .body-container .flex-container .col-container .textarea:focus, .body-container .flex-container .col-container .textarea:active {
+          border-color: #2ecc71;
+          transition: .2s border-color; }
+  .body-container #language-selection1 {
+    float: left; }
+  .body-container .language-selection {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 60px;
+    margin: 0;
+    padding: 0;
+    background-color: #34495e; }
+    .body-container .language-selection select {
+      float: left;
+      outline: none;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0 45px 0 15px;
+      border: 0;
+      background-color: transparent;
       font-size: 16px;
       color: #fff;
-      outline: none; }
-      .body-container .text-container .textarea:first-child {
-        margin-right: 4%; }
-      .body-container .text-container .textarea:focus, .body-container .text-container .textarea:active {
+      border: 1px solid #fff;
+      border-radius: 0;
+      cursor: pointer;
+      -moz-appearance: none;
+      -ms-progress-appearance: none;
+      -webkit-appearance: none; }
+      .body-container .language-selection select:focus, .body-container .language-selection select:active {
         border-color: #2ecc71;
         transition: .2s border-color; }
+      .body-container .language-selection select > option {
+        -moz-appearance: none;
+        -ms-progress-appearance: none;
+        -webkit-appearance: none; }
+    .body-container .language-selection:after {
+      content: "";
+      widows: 0;
+      height: 0;
+      border-top: 9px solid #fff;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent;
+      position: absolute;
+      top: 27px;
+      right: 15px; }
   .body-container #translate-button {
     padding: 20px 50px;
     border-radius: 0;
@@ -42,6 +89,3 @@ html {
     .body-container #translate-button:hover {
       background-color: #27ae60;
       transition: .2s background-color; }
-  .body-container .error-message {
-    display: none;
-    color: #e74c3c; }

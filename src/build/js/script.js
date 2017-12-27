@@ -57,8 +57,6 @@ function translate() {
         }).catch(function (err) {
             console.log('Error: ' + err);
         });
-    } else {
-        // TODO: Display error message
     }
 }
 
