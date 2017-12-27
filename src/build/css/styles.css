@@ -42,3 +42,6 @@ html {
     .body-container #translate-button:hover {
       background-color: #27ae60;
       transition: .2s background-color; }
+  .body-container .error-message {
+    display: none;
+    color: #e74c3c; }

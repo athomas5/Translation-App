@@ -4,6 +4,7 @@ $blue: #062F4F;
 $asphalt: #34495e;
 $light-green: #2ecc71;
 $dark-green: #27ae60;
+$red: #e74c3c;
 
 
 html {
@@ -67,5 +68,10 @@ html {
             background-color: $dark-green;
             transition: .2s background-color;
         }
+    }
+
+    .error-message {
+        display: none;
+        color: $red;
     }
 }
